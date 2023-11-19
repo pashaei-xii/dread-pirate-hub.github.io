@@ -1,116 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Website</title>
+    <title>Simple Web Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .column {
+            flex: 1;
             padding: 20px;
         }
 
-        section {
-            max-width: 800px;
-            margin: 20px auto;
+        .extra-column {
+            flex-basis: 25%; /* Adjust the width of the extra column as needed */
+            background-color: #f1f1f1;
+        }
+
+        .post-column {
+            flex-grow: 1;
             background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1,
-        h2 {
+        h1, h2 {
             color: #333;
-        }
-
-        h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-top: 20px;
         }
 
         p {
             line-height: 1.6;
+            color: #666;
         }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        /* Add your custom styles below */
-
     </style>
 </head>
-
 <body>
-
-    <header>
-        <h1>Your Name</h1>
-        <p>Your Profession/Title</p>
-    </header>
-
-    <section>
-        <h2>Education</h2>
-        <p>Sep. 20XX – Jun. 20XX: University Name, Degree, Major.</p>
-        <p>Project/Thesis: [Title of Project/Thesis]</p>
-        <p>Sep. 20XX - Now: [Additional Education Details]</p>
-    </section>
-
-    <!-- Add other sections as needed -->
-
-    <footer>
-        <p>Contact: [Your Phone Number] | Email: <a href="mailto:your.email@example.com">your.email@example.com</a> | LinkedIn: <a
-                href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">linkedin.com/in/your-linkedin-profile</a>
-        </p>
-    </footer>
-
+    <div class="container">
+        <div class="column extra-column">
+            <h2>Extra Information</h2>
+            <p>This is the narrow column for extra information.</p>
+            <p>You can add any additional content here.</p>
+        </div>
+        <div class="column post-column">
+            <h1>Welcome to My Blog</h1>
+            <div class="post">
+                <h2>Post Title 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac dolor sed libero efficitur euismod.</p>
+            </div>
+            <div class="post">
+                <h2>Post Title 2</h2>
+                <p>Curabitur vehicula, libero eu vehicula fermentum, metus libero finibus neque, nec cursus felis risus in odio.</p>
+            </div>
+            <!-- Add more posts as needed -->
+        </div>
+    </div>
 </body>
-
 </html>
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Process the form data here
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    // Add more fields as needed
-
-    // You can perform additional actions with the form data here (e.g., send an email, save to a database)
-}
-?>
